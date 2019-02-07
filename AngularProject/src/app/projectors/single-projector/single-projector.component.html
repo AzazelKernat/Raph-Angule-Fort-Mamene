@@ -1,0 +1,15 @@
+<div *ngIf="videoprojector">
+  <div>
+    <label>Code: </label> {{videoprojector.code}}
+  </div>
+  <div>
+    <label>Price: </label> {{videoprojector.price}}
+  </div>
+  <div>
+    <label>Availability: </label> {{videoprojector.availability}}
+  </div>
+<!--   <div>
+    <label>Room: </label> {{videoprojector.room}}
+  </div> -->
+  <span class="button is-small btn-danger" (click)='deleteProjector()'>Delete</span>
+</div>

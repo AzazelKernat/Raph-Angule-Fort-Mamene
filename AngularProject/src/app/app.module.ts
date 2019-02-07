@@ -26,6 +26,11 @@ import { ContactComponent } from './contact/contact.component';
 import { AdminsListComponent } from './admins/admins-list/admins-list.component';
 import { SingleAdminComponent } from './admins/single-admin/single-admin.component';
 import { CreateAdminComponent } from './admins/create-admin/create-admin.component';
+import { SingleProjectorComponent } from './projectors/single-projector/single-projector.component';
+import { SearchProjectorsComponent } from './projectors/search-projectors/search-projectors.component';
+import { EditProjectorComponent } from './projectors/edit-projector/edit-projector.component';
+import { CreateProjectorComponent } from './projectors/create-projector/create-projector.component';
+import { ProjectorsListComponent } from './projectors/projectors-list/projectors-list.component';
 
 const appRoutes: Routes =
     [{ path: 'login', component: LoginComponent },
@@ -40,6 +45,10 @@ const appRoutes: Routes =
     { path: 'ordinateurs/search', component: SearchComputersComponent },
     { path: 'admins', component: AdminsListComponent },
     { path: 'admins/create', component: CreateAdminComponent },
+    { path: 'projectors', component: ProjectorsListComponent },
+    { path: 'projectors/create', component: CreateProjectorComponent },
+    { path: 'projectors/edit', component: EditProjectorComponent },
+    { path: 'projectors/search', component: SearchProjectorsComponent },
     ];
 
 @NgModule({
@@ -63,7 +72,12 @@ const appRoutes: Routes =
         ContactComponent,
         AdminsListComponent,
         SingleAdminComponent,
-        CreateAdminComponent
+        CreateAdminComponent,
+        SingleProjectorComponent,
+        SearchProjectorsComponent,
+        EditProjectorComponent,
+        CreateProjectorComponent,
+        ProjectorsListComponent
     ],
     imports: [
         BrowserModule,

@@ -1,4 +1,7 @@
 import { Room } from './room';
 
 export class Videoprojector {
-    room: Room; }
+    code: string;
+    price: Int16Array;
+    availability: boolean;
+ }

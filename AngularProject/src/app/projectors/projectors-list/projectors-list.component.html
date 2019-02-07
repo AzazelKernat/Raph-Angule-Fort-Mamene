@@ -1,0 +1,20 @@
+<h1>Projectors</h1>
+ 
+<div *ngFor="let projector of projectors | async" style="width: 300px;">
+  <app-single-projector [videoprojector]='projector'></app-single-projector>
+</div>
+
+<div>
+  <button type="button" class="button btn-success" (click)='reloadData()'>Load All Projectors</button>
+</div>
+<nav>
+<div>
+<a routerLink="create" class="btn btn-primary active" role="button" routerLinkActive="active">Add A Projector</a>
+</div>
+<div>
+  <a routerLink="edit" class="btn btn-primary active" role="button" routerLinkActive="active">Edit A Projector</a>
+  </div>
+  <div>
+    <a routerLink="search" class="btn btn-primary active" role="button" routerLinkActive="active">Search A Projector</a>
+    </div>
+</nav>
