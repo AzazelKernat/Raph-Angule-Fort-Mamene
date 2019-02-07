@@ -1,0 +1,14 @@
+<h1>Interns</h1>
+ 
+<div *ngFor="let intern of interns | async" style="width: 300px;">
+  <app-single-intern [intern]='intern'></app-single-intern>
+</div>
+
+<div>
+  <button type="button" class="button btn-success" (click)='reloadData()'>Load All Interns</button>
+</div>
+<nav>
+<div>
+<a routerLink="create" class="btn btn-primary active" role="button" routerLinkActive="active">Add An Intern</a>
+</div>
+</nav>

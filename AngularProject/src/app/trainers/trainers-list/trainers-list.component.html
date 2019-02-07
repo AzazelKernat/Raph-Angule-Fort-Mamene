@@ -1,0 +1,14 @@
+<h1>Trainers</h1>
+ 
+<div *ngFor="let trainer of trainers | async" style="width: 300px;">
+  <app-single-trainer [trainer]='trainer'></app-single-trainer>
+</div>
+
+<div>
+  <button type="button" class="button btn-success" (click)='reloadData()'>Load All Trainers</button>
+</div>
+<nav>
+<div>
+<a routerLink="create" class="btn btn-primary active" role="button" routerLinkActive="active">Add A Trainer</a>
+</div>
+</nav>

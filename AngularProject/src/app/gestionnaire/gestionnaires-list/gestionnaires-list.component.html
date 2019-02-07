@@ -1,0 +1,14 @@
+<h1>Gestionnaires</h1>
+ 
+<div *ngFor="let gestionnaire of gestionnaires | async" style="width: 300px;">
+  <app-single-gestionnaire [gestionnaire]='gestionnaire'></app-single-gestionnaire>
+</div>
+
+<div>
+  <button type="button" class="button btn-success" (click)='reloadData()'>Load All Gestionnaires</button>
+</div>
+<nav>
+<div>
+<a routerLink="create" class="btn btn-primary active" role="button" routerLinkActive="active">Add A Gestionnaire</a>
+</div>
+</nav>

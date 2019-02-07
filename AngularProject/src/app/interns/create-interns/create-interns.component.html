@@ -1,0 +1,47 @@
+<h3>Create Intern</h3>
+<div [hidden]="submitted" style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Id</label>
+      <input type="text" class="form-control" id="id" required [(ngModel)]="intern.id" name="id">
+    </div>
+ 
+    <div class="form-group">
+      <label for="age">Surname</label>
+      <input type="text" class="form-control" id="surname" required [(ngModel)]="intern.surname" name="surname">
+    </div>
+    <div class="form-group">
+      <label for="age">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="intern.name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="age">Adress</label>
+      <input type="text" class="form-control" id="adress" required [(ngModel)]="intern.adress" name="adress">
+    </div>
+    <div class="form-group">
+      <label for="age">Contact</label>
+      <input type="text" class="form-control" id="contact" required [(ngModel)]="intern.contact" name="contact">
+    </div>
+    <div class="form-group">
+      <label for="age">Trainer</label>
+      <input type="text" class="form-control" id="trainer" required [(ngModel)]="intern.trainer" name="trainer">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Computer</label>
+      <input type="text" class="form-control" id="computer" required [(ngModel)]="intern.computer" name="computer">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Formation</label>
+      <input type="text" class="form-control" id="formation" required [(ngModel)]="intern.formation" name="formation">
+    </div>
+ 
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+ 
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <button class="btn btn-success" (click)="newIntern()">Add</button>
+</div>

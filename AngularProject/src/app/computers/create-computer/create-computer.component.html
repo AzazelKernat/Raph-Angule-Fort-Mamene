@@ -1,0 +1,37 @@
+<h3>Create Computer</h3>
+<div [hidden]="submitted" style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Code</label>
+      <input type="text" class="form-control" id="code" required [(ngModel)]="computer.code" name="code">
+    </div>
+ 
+    <div class="form-group">
+      <label for="age">Price</label>
+      <input type="text" class="form-control" id="price" required [(ngModel)]="computer.price" name="price">
+    </div>
+    <div class="form-group">
+      <label for="age">Availability</label>
+      <input type="text" class="form-control" id="availability" required [(ngModel)]="computer.availability" name="availability">
+    </div>
+    <div class="form-group">
+      <label for="age">Processor</label>
+      <input type="text" class="form-control" id="processor" required [(ngModel)]="computer.processor" name="processor">
+    </div>
+    <div class="form-group">
+      <label for="age">RAM</label>
+      <input type="text" class="form-control" id="ram" required [(ngModel)]="computer.ram" name="ram">
+    </div>
+    <div class="form-group">
+      <label for="age">Hard Disk</label>
+      <input type="text" class="form-control" id="hardDisk" required [(ngModel)]="computer.hardDisk" name="hardDisk">
+    </div>
+ 
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+ 
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <button class="btn btn-success" (click)="newComputer()">Add</button>
+</div>

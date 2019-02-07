@@ -1,0 +1,14 @@
+<h1>Admins</h1>
+ 
+<div *ngFor="let admin of admins | async" style="width: 300px;">
+  <app-single-admin [admin]='admin'></app-single-admin>
+</div>
+
+<div>
+  <button type="button" class="button btn-success" (click)='reloadData()'>Load All Admins</button>
+</div>
+<nav>
+<div>
+<a routerLink="create" class="btn btn-primary active" role="button" routerLinkActive="active">Add An Admin</a>
+</div>
+</nav>

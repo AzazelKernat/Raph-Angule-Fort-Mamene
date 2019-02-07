@@ -1,0 +1,42 @@
+<h3>Create Gestionnaire</h3>
+<div [hidden]="submitted" style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Id</label>
+      <input type="text" class="form-control" id="id" required [(ngModel)]="gestionnaire.id" name="id">
+    </div>
+ 
+    <div class="form-group">
+      <label for="age">Surname</label>
+      <input type="text" class="form-control" id="surname" required [(ngModel)]="gestionnaire.surname" name="surname">
+    </div>
+    <div class="form-group">
+      <label for="age">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="gestionnaire.name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="age">Adress</label>
+      <input type="text" class="form-control" id="adress" required [(ngModel)]="gestionnaire.adress" name="adress">
+    </div>
+    <div class="form-group">
+      <label for="age">Contact</label>
+      <input type="text" class="form-control" id="contact" required [(ngModel)]="gestionnaire.contact" name="contact">
+    </div>
+    <div class="form-group">
+      <label for="age">Password</label>
+      <input type="text" class="form-control" id="password" required [(ngModel)]="gestionnaire.password" name="password">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Username</label>
+      <input type="text" class="form-control" id="username" required [(ngModel)]="gestionnaire.username" name="username">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+ 
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <button class="btn btn-success" (click)="newGestionnaire()">Add</button>
+</div>

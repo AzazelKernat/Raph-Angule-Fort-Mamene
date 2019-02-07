@@ -1,0 +1,34 @@
+<h3>Find By Code</h3>
+<div style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="code">Code</label>
+      <input type="text" class="form-control" required [(ngModel)]="computer.code" name="code">
+      <div>{{computer.code}}</div>
+    </div>
+ 
+    <div class="btn-group">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+</div>
+<div class="btn-group">
+  <button class="btn btn-success" (click)="onSubmit2()">Submit</button>
+</div>
+<div>
+    <h4>{{computer.code}} -- {{computer.price}} -- {{computer.availibility}} -- {{computer.processor}} -- {{computer.ram}} -- {{computer.hardDisk}}</h4>
+</div>
+
+<div>
+    <h4>{{computer2.code}} -- {{computer2.price}} -- {{computer2.availibility}} -- {{computer2.processor}} -- {{computer2.ram}} -- {{computer2.hardDisk}}</h4>
+</div>
+
+<app-single-intern [intern]="computer2.intern"></app-single-intern>
+
+
+    <app-single-adresse [adress]="computer2.intern.adress"></app-single-adresse>
+
+
+      <app-contact [contact]="computer2.intern.contact"></app-contact>
+
+
