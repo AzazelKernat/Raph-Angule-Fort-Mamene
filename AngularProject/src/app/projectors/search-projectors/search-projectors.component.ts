@@ -22,8 +22,8 @@ export class SearchProjectorsComponent implements OnInit {
   searchProjectorByCode() {
     this.projectorService.getProjectorById(this.projector.code)
       .subscribe(data => {
-        if (data!=null)
-          this.projector = JSON.parse(JSON.stringify(data))
+        if (data!=null) {
+          this.projector = JSON.parse(JSON.stringify(data));}
         else
           alert('Objet non trouvé !')
       }
@@ -33,4 +33,9 @@ export class SearchProjectorsComponent implements OnInit {
   onSubmit() {
     this.searchProjectorByCode();
   }
+  
+  onSubmit2() {
+    this.projector=new Videoprojector();
+  }
+
 }

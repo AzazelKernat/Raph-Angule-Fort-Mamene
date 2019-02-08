@@ -31,4 +31,6 @@ export class InternService {
     return this.http.delete(`${this.baseUrl}/${id}`);
   }
 
+  
+
 }

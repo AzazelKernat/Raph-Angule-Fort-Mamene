@@ -19,7 +19,7 @@ export class ProjectorsListComponent implements OnInit {
   }
 
   reloadData() {
-    this.projectorService.getProjectorsList().subscribe(data => console.log(data));
+    this.projectors = this.projectorService.getProjectorsList();
 
-  }
+}
 }

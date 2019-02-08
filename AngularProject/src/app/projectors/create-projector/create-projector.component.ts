@@ -10,23 +10,25 @@ import { Videoprojector } from 'src/app/models/videoprojector';
 export class CreateProjectorComponent implements OnInit {
 
   constructor(private projectorService: ProjectorService) { }
+
   projector: Videoprojector = new Videoprojector();
   submitted: boolean = false;
+
   ngOnInit() {
   }
+
   newProjector() {
-    this.submitted=false;
+    this.submitted = false;
     this.projector = new Videoprojector();
   }
 
   save() {
-    this.projectorService.createProjector(this.projector)
-      .subscribe(data => console.log(data), error => console.log(error));
-    this.projector=new Videoprojector();
+    this.projectorService.createProjector(this.projector).subscribe(data => console.log(data), error => console.log(error));
+    this.projector = new Videoprojector();
   }
 
   onSubmit() {
-    this.submitted=true;
+    this.submitted = true;
     this.save();
   }
 }

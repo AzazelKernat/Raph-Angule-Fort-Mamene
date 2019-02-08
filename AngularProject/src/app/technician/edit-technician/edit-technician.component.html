@@ -1,0 +1,63 @@
+<h3>Edit Technician</h3>
+<div [hidden]="submitted" style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Id</label>
+      <input type="number" class="form-control" id="id" required [(ngModel)]="technician.id" name="technician.id">
+    </div>
+ 
+    <div class="form-group">
+      <label for="age">Surname</label>
+      <input type="text" class="form-control" id="surname" required [(ngModel)]="technician.surname" name="technician.surname">
+    </div>
+    <div class="form-group">
+      <label for="age">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="technician.name" name="technician.name">
+    </div>
+    <div class="form-group">
+      <label for="age">City</label>
+      <input type="text" class="form-control" id="adress" required [(ngModel)]="technician.adress.city" name="technician.adress.city">
+    </div>
+    <div class="form-group">
+      <label for="age">Country</label>
+      <input type="text" class="form-control" id="adress" required [(ngModel)]="technician.adress.country" name="technician.adress.country">
+    </div>
+    <div class="form-group">
+      <label for="age">Number</label>
+      <input type="number" class="form-control" id="adress" required [(ngModel)]="technician.adress.number" name="technician.adress.number">
+    </div>
+    <div class="form-group">
+      <label for="age">Street</label>
+      <input type="text" class="form-control" id="adress" required [(ngModel)]="technician.adress.street" name="technician.adress.street">
+    </div>
+    <div class="form-group">
+      <label for="age">Zipcode</label>
+      <input type="number" class="form-control" id="adress" required [(ngModel)]="technician.adress.zipcode" name="technician.adress.zipcode">
+    </div>
+    <div class="form-group">
+      <label for="age">Mail</label>
+      <input type="text" class="form-control" id="contact" required [(ngModel)]="technician.contact.email" name="technician.contact.email">
+    </div>
+    <div class="form-group">
+      <label for="age">Phone</label>
+      <input type="number" class="form-control" id="contact" required [(ngModel)]="technician.contact.phone" name="technician.contact.phone">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Password</label>
+      <input type="text" class="form-control" id="password" required [(ngModel)]="technician.password" name="technician.password">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Username</label>
+      <input type="text" class="form-control" id="username" required [(ngModel)]="technician.username" name="technician.username">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+ 
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <button class="btn btn-success" (click)="newTechnician()">Add</button>
+</div>

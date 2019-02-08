@@ -10,8 +10,10 @@ import { Videoprojector } from 'src/app/models/videoprojector';
 export class EditProjectorComponent implements OnInit {
 
   constructor(private projectorService: ProjectorService) { }
+  
   projector: Videoprojector = new Videoprojector();
   submitted: boolean = false;
+
   ngOnInit() {
   }
   newProjector() {
